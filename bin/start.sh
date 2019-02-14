@@ -40,8 +40,8 @@ if [ "x$MAX_HEAP_SIZE" != "x" ]; then
 	JAVA_OPTS="$JAVA_OPTS -Xmx${MAX_HEAP_SIZE}"
 fi
 
-export CLASSPATH="$HAZELCAST_HOME/lib/hazelcast-all-3.8.1.jar"
-
+export CLASSPATH="$HAZELCAST_HOME/lib/hazelcast-all-3.8.1.jar;/home/iot/devicehive-java-server/devicehive-common/target/devicehive-common-3.5.0-shade.jar"
+export JAVA_OPTS="$JAVA_OPTS -cp /home/iot/devicehive-java-server/devicehive-common/target/devicehive-common-3.5.0-shade.jar;/home/iot/hazelcast-3.8.1/lib/hazelcast-all-3.8.1.jar"
 echo "########################################"
 echo "# RUN_JAVA=$RUN_JAVA"
 echo "# JAVA_OPTS=$JAVA_OPTS"
